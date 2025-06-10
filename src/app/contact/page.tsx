@@ -64,7 +64,7 @@ export default function ContactPage() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300">
-              Have a project in mind? We'd love to hear from you.
+              Have a project in mind? We&apos;d love to hear from you.
             </p>
           </motion.div>
         </div>

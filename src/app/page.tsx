@@ -151,7 +151,7 @@ export default function Home() {
                     lineHeight: '1.6'
                   }}
                 >
-                  Our vision: a WMS solution adaptable enough to fit any company's unique workflow—without adding complexity. So, we built MepScans—a flexible yet intuitive WMS software designed to easily configure and seamlessly support every workflow. This is our guiding principle: "Simplicity in Complexity."
+                  Our vision: a WMS solution adaptable enough to fit any company&apos;s unique workflow—without adding complexity. So, we built MepScans—a flexible yet intuitive WMS software designed to easily configure and seamlessly support every workflow. This is our guiding principle: &quot;Simplicity in Complexity&quot;.
                 </p>
               </motion.div>
 
@@ -367,7 +367,7 @@ export default function Home() {
                       lineHeight: '1.4'
                     }}
                   >
-                    It precisely mirrors your workflow, ensuring you're never forced into a generic, one-size-fits-all process.
+                    It precisely mirrors your workflow, ensuring you&apos;re never forced into a generic, one-size-fits-all process.
                   </p>
                 </motion.div>
 
