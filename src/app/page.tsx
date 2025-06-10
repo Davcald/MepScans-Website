@@ -1066,14 +1066,20 @@ export default function Home() {
                     amount: 0.5
                   }}
                 >
-                  <motion.div 
-                    whileInView={{ y: [0, -5, 5, 0] }}
-                    viewport={{ once: false, margin: "-100px" }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                    className="w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-4xl md:text-6xl shadow-lg"
-                    style={{ background: 'var(--background)' }}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.7 }}
+                    className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex items-center justify-center"
                   >
-                    📊
+                    <Image
+                      src="/images/live.png"
+                      alt="Live Data Illustration"
+                      width={256}
+                      height={256}
+                      className="object-contain w-full h-full"
+                      priority={true}
+                    />
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -1173,14 +1179,20 @@ export default function Home() {
                     amount: 0.5
                   }}
                 >
-                  <motion.div 
-                    whileInView={{ scale: [1, 1.05, 1] }}
-                    viewport={{ once: false, margin: "-100px" }}
-                    transition={{ duration: 1, repeat: Infinity }}
-                    className="w-20 h-20 md:w-32 md:h-32 rounded-full flex items-center justify-center text-4xl md:text-6xl shadow-lg"
-                    style={{ background: 'var(--background)' }}
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.7 }}
+                    className="w-48 h-48 md:w-64 md:h-64 rounded-2xl overflow-hidden flex items-center justify-center"
                   >
-                    📝
+                    <Image
+                      src="/images/log.png"
+                      alt="Logging Illustration"
+                      width={256}
+                      height={256}
+                      className="object-contain w-full h-full"
+                      priority={true}
+                    />
                   </motion.div>
                 </motion.div>
               </motion.div>
