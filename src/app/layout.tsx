@@ -26,28 +26,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
-        style={{transition: "background-color 0.3s ease, color 0.3s ease"}}
-      >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex flex-col min-h-screen">
-            <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
-              <Navigation />
-            </header>
-            <main className="flex-grow pt-16">
-              {children}
-            </main>
-            <footer className="border-t border-gray-200 dark:border-gray-800">
-              <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
-                <p className="text-center text-sm opacity-60">
-                  © {new Date().getFullYear()} MepScans. All rights reserved.
-                </p>
-              </div>
-            </footer>
-          </div>
-        </ThemeProvider>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`} style={{transition: "background-color 0.3s ease, color 0.3s ease"}}>
+        <div className="flex flex-col min-h-screen">
+          <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
+            <Navigation />
+          </header>
+          <main className="flex-grow pt-16">
+            {children}
+          </main>
+          <footer className="border-t border-gray-200 dark:border-gray-800">
+            <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+              <p className="text-center text-sm opacity-60">
+                © {new Date().getFullYear()} MepScans. All rights reserved.
+              </p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );

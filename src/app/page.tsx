@@ -19,27 +19,14 @@ export default function Home() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
           <motion.h1
             {...fadeInUp}
-            className="text-5xl sm:text-7xl font-semibold tracking-tight mb-6"
+            className="text-5xl sm:text-7xl font-semibold tracking-tight mb-6 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
             style={{ 
-              color: 'var(--foreground)',
               letterSpacing: '-0.015em',
               lineHeight: '1.05'
             }}
           >
             MepScans
           </motion.h1>
-          <motion.h2
-            {...fadeInUp}
-            transition={{ delay: 0.1 }}
-            className="text-3xl sm:text-5xl font-medium mb-8"
-            style={{ 
-              color: 'var(--primary)',
-              letterSpacing: '-0.01em',
-              lineHeight: '1.1'
-            }}
-          >
-            Your workflows, our WMS
-          </motion.h2>
           <motion.p
             {...fadeInUp}
             transition={{ delay: 0.2 }}
@@ -59,26 +46,12 @@ export default function Home() {
           >
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium rounded-full text-white hover:opacity-90 transition-colors"
-              style={{ 
-                background: 'var(--primary)',
-                letterSpacing: '-0.01em'
-              }}
+              className="inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium rounded-full bg-white text-black border border-black hover:opacity-90 transition-colors"
+              style={{ letterSpacing: '-0.01em' }}
             >
               Request a Demo
             </Link>
-            <Link
-              href="/pricing"
-              className="inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium rounded-full hover:opacity-90 transition-colors"
-              style={{ 
-                background: 'var(--secondary)',
-                color: 'var(--foreground)',
-                borderColor: 'var(--foreground)',
-                letterSpacing: '-0.01em'
-              }}
-            >
-              View Pricing
-            </Link>
+
           </motion.div>
         </div>
       </section>
@@ -105,19 +78,15 @@ export default function Home() {
             >
               <div className="space-y-4">
                 <motion.h2 
-                  className="text-4xl sm:text-5xl font-semibold"
-                  style={{ 
-                    color: 'var(--foreground)',
-                    letterSpacing: '-0.015em',
-                    lineHeight: '1.1'
-                  }}
+                  className="text-4xl sm:text-5xl font-semibold bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                  style={{ letterSpacing: '-0.015em', lineHeight: '1.1' }}
                 >
                   Who We Are
                 </motion.h2>
                 <motion.p 
-                  className="text-xl sm:text-2xl font-medium"
+                  className="sm:text-2xl font-medium bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
                   style={{ 
-                    color: 'var(--primary)',
+
                     letterSpacing: '-0.01em',
                     lineHeight: '1.3'
                   }}
@@ -153,19 +122,6 @@ export default function Home() {
                 >
                   Our vision: a WMS solution adaptable enough to fit any company&apos;s unique workflow—without adding complexity. So, we built MepScans—a flexible yet intuitive WMS software designed to easily configure and seamlessly support every workflow. This is our guiding principle: &quot;Simplicity in Complexity&quot;.
                 </p>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                className="inline-block px-6 py-3 rounded-full"
-                style={{ 
-                  background: 'var(--secondary)',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)'
-                }}
-              >
               </motion.div>
             </motion.div>
 
@@ -257,7 +213,7 @@ export default function Home() {
       </section>
 
       {/* Getting Started with MepScans - Scrollable Section with Timeline */}
-      <section className="py-32 overflow-hidden" style={{ background: 'var(--secondary)' }}>
+      <section className="py-32 overflow-hidden" style={{ background: "Black" }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -267,12 +223,8 @@ export default function Home() {
             className="text-center mb-24"
           >
             <h2 
-              className="text-4xl sm:text-5xl font-semibold mb-6"
-              style={{ 
-                color: 'var(--foreground)',
-                letterSpacing: '-0.015em',
-                lineHeight: '1.1'
-              }}
+              className="text-4xl sm:text-5xl font-semibold mb-6 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+              style={{ letterSpacing: '-0.015em', lineHeight: '1.1' }}
             >
               How MepScans Works
             </h2>
@@ -340,12 +292,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Map Your Workflows
                   </h3>
@@ -453,12 +401,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Define Your Prompts
                   </h3>
@@ -566,12 +510,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Selection Search
                   </h3>
@@ -679,12 +619,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Verification & Conditional Checks
                   </h3>
@@ -792,12 +728,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Auto-Select
                   </h3>
@@ -905,12 +837,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Looping
                   </h3>
@@ -1018,12 +946,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Live Data
                   </h3>
@@ -1131,12 +1055,8 @@ export default function Home() {
                   }}
                 >
                   <h3 
-                    className="text-2xl sm:text-3xl font-semibold mb-4"
-                    style={{ 
-                      color: 'var(--foreground)',
-                      letterSpacing: '-0.01em',
-                      lineHeight: '1.2'
-                    }}
+                    className="text-2xl sm:text-3xl font-semibold mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+                    style={{ letterSpacing: '-0.01em', lineHeight: '1.2' }}
                   >
                     Logging
                   </h3>
@@ -1232,12 +1152,8 @@ export default function Home() {
             className="text-center mb-24"
           >
             <h2 
-              className="text-4xl sm:text-5xl font-semibold mb-6"
-              style={{ 
-                color: 'var(--foreground)',
-                letterSpacing: '-0.015em',
-                lineHeight: '1.1'
-              }}
+              className="text-4xl sm:text-5xl font-semibold mb-6 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+              style={{ letterSpacing: '-0.015em', lineHeight: '1.1' }}
             >
               Common Programs
             </h2>
@@ -1289,22 +1205,15 @@ export default function Home() {
             transition={{ duration: 0.5 }}
           >
             <h2 
-              className="text-4xl sm:text-5xl font-semibold mb-8"
-              style={{ 
-                color: 'var(--foreground)',
-                letterSpacing: '-0.015em',
-                lineHeight: '1.1'
-              }}
+              className="text-4xl sm:text-5xl font-semibold mb-8 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
+              style={{ letterSpacing: '-0.015em', lineHeight: '1.1' }}
             >
               Ready to see MepScans in action?
             </h2>
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium rounded-full text-white hover:opacity-90 transition-colors"
-              style={{ 
-                background: 'var(--primary)',
-                letterSpacing: '-0.01em'
-              }}
+              className="inline-flex items-center justify-center px-8 py-3.5 text-lg font-medium rounded-full bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 text-white hover:opacity-90 transition-colors"
+              style={{ letterSpacing: '-0.01em' }}
             >
               Request a Demo
             </Link>

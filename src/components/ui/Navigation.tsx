@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { ThemeToggle } from './ThemeToggle';
 
 const navigation = [
   { name: 'Home', href: '/' },
@@ -19,87 +18,38 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-      <div className="flex h-16 items-center justify-between">
-        <div className="flex items-center">
-          <Link href="/" className="text-xl font-bold transition-colors duration-300">
-            MepScans
+    <nav className="bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 p-[4px] rounded-2xl mx-auto max-w-7xl mt-4">
+      <div className="bg-white dark:bg-black rounded-xl flex items-center justify-between px-6 py-2">
+        {/* Logo */}
+        <div className="flex items-center gap-2 font-bold text-lg">
+          <span className="text-purple-500">MepScans</span>
+        </div>
+        {/* Nav Links */}
+        <ul className="hidden md:flex gap-8 font-bold flex-1 justify-center">
+          {navigation.map((item) => (
+            <li key={item.name}>
+              <Link
+                href={item.href}
+                className={`relative px-3 py-2 text-sm font-bold rounded transition-colors duration-300
+                  ${pathname === item.href
+                    ? 'bg-white text-black'
+                    : 'hover:bg-black hover:text-black hover:bg-white dark:hover:text-black'}
+                `}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+        {/* Actions */}
+        <div className="flex items-center gap-3">
+          <Link href="/contact"
+            className="hidden md:inline-flex bg-white text-black dark:bg-black dark:text-white px-5 py-2 rounded-lg font-semibold items-center gap-2 border border-neutral-300 dark:border-neutral-700 hover:bg-orange-400 hover:text-white dark:hover:bg-orange-400 dark:hover:text-white transition">
+            Request Demo
           </Link>
         </div>
-
-        {/* Desktop navigation */}
-        <div className="hidden md:flex md:items-center md:space-x-8">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`relative px-3 py-2 text-sm font-medium transition-colors duration-300
-                ${pathname === item.href
-                  ? ''
-                  : 'opacity-60 hover:opacity-100'
-                }`}
-            >
-              {item.name}
-              {pathname === item.href && (
-                <motion.div
-                  layoutId="navigation-underline"
-                  className="absolute left-0 right-0 h-0.5 bottom-0 bg-primary-light dark:bg-primary-dark"
-                  initial={false}
-                  transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                />
-              )}
-            </Link>
-          ))}
-          <ThemeToggle />
-        </div>
-
-        {/* Mobile menu button */}
-        <div className="flex md:hidden">
-          <ThemeToggle />
-          <button
-            type="button"
-            className="ml-2 inline-flex items-center justify-center rounded-md p-2 opacity-60 hover:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors duration-300"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <span className="sr-only">Open main menu</span>
-            {mobileMenuOpen ? (
-              <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-            ) : (
-              <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-            )}
-          </button>
-        </div>
       </div>
-
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.2 }}
-            className="md:hidden"
-          >
-            <div className="space-y-1 px-2 pb-3 pt-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  className={`block rounded-md px-3 py-2 text-base font-medium transition-colors duration-300
-                    ${pathname === item.href
-                      ? 'bg-gray-200 dark:bg-gray-800'
-                      : 'opacity-60 hover:opacity-100 hover:bg-gray-200 dark:hover:bg-gray-800'
-                    }`}
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+  
     </nav>
   );
 } 
