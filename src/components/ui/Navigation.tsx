@@ -18,7 +18,7 @@ export function Navigation() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 p-[4px] rounded-2xl mx-auto max-w-7xl mt-4">
+    <nav className="overflow-auto bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 p-[6px] rounded-2xl mx-auto max-w-7xl mt-4">
       <div className="bg-white dark:bg-black rounded-xl flex items-center justify-between px-6 py-2">
         {/* Logo */}
         <div className="flex items-center gap-2 font-bold text-lg">
@@ -44,7 +44,7 @@ export function Navigation() {
         {/* Actions */}
         <div className="flex items-center gap-3">
           <Link href="/contact"
-            className="hidden md:inline-flex bg-white text-black dark:bg-black dark:text-white px-5 py-2 rounded-lg font-semibold items-center gap-2 border border-neutral-300 dark:border-neutral-700 hover:bg-orange-400 hover:text-white dark:hover:bg-orange-400 dark:hover:text-white transition">
+            className="hidden md:inline-flex bg-black text-white px-5 py-2 rounded-lg font-semibold items-center gap-2 hover:text-white hover:bg-white dark:hover:text-black transition">
             Request Demo
           </Link>
         </div>

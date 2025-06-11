@@ -103,7 +103,7 @@ export default function Home() {
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
                 <p 
-                  className="text-lg sm:text-xl mb-6 font-normal"
+                  className="text-lg font-normal"
                   style={{ 
                     color: 'var(--foreground)',
                     letterSpacing: '-0.01em',
@@ -113,7 +113,7 @@ export default function Home() {
                   With over three decades of experience in the ERP and manufacturing industry, our team has specialized in Syspro ERP solutions. Observing clients consistently adapting their processes to rigid warehouse management systems, we knew there had to be a better way.
                 </p>
                 <p 
-                  className="text-lg sm:text-xl font-normal"
+                  className="text-lg font-normal"
                   style={{ 
                     color: 'var(--foreground)',
                     letterSpacing: '-0.01em',
@@ -298,21 +298,21 @@ export default function Home() {
                     Map Your Workflows
                   </h3>
                   <p 
-                    className="text-lg sm:text-xl mb-4 font-normal"
+                    className="text-lg font-normal"
                     style={{ 
                       color: 'var(--foreground)',
                       letterSpacing: '-0.01em',
-                      lineHeight: '1.4'
+                      lineHeight: '1.6'
                     }}
                   >
                     MepScans brings your current or improved workflows to life with tailored warehouse management software.
                   </p>
                   <p 
-                    className="text-lg sm:text-xl font-normal"
+                    className="text-lg font-normal"
                     style={{ 
                       color: 'var(--foreground)',
                       letterSpacing: '-0.01em',
-                      lineHeight: '1.4'
+                      lineHeight: '1.6'
                     }}
                   >
                     It precisely mirrors your workflow, ensuring you&apos;re never forced into a generic, one-size-fits-all process.
@@ -407,7 +407,7 @@ export default function Home() {
                     Define Your Prompts
                   </h3>
                   <p 
-                    className="text-lg sm:text-xl mb-4 font-normal"
+                    className="text-lg font-normal"
                     style={{ 
                       color: 'var(--foreground)',
                       letterSpacing: '-0.01em',
@@ -417,7 +417,7 @@ export default function Home() {
                     Clearly define each step and prompt exactly how your team prefers.
                   </p>
                   <p 
-                    className="text-lg sm:text-xl font-normal"
+                    className="text-lg font-normal"
                     style={{ 
                       color: 'var(--foreground)',
                       letterSpacing: '-0.01em',
@@ -1142,7 +1142,7 @@ export default function Home() {
       </section>
 
       {/* Common Programs Section */}
-      <section className="py-32" style={{ background: 'var(--secondary)' }}>
+      <section className="py-32" style={{ background: 'black' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1155,42 +1155,107 @@ export default function Home() {
               className="text-4xl sm:text-5xl font-semibold mb-6 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent"
               style={{ letterSpacing: '-0.015em', lineHeight: '1.1' }}
             >
-              Common Programs
+              What Else Can MepScans Do?
             </h2>
+            <p 
+              className="text-xl sm:text-2xl mb-12 max-w-3xl mx-auto font-normal"
+              style={{ 
+                color: 'var(--foreground)',
+                letterSpacing: '-0.01em',
+                lineHeight: '1.4'
+              }}
+            >
+              Unlock powerful extras to streamline tasks, boost productivity, and gain total warehouse visibility.
+            </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {[
-              'Stock Taking',
-              'Purchase Order Receiving',
-              'Sales Order Picking',
-              'Shipping',
-              'Printing Labels'
-            ].map((program, index) => (
-              <motion.div
-                key={program}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-8 rounded-2xl text-center hover:shadow-lg transition-shadow"
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-8 rounded-lg text-center hover:shadow-xl transition-shadow transform hover:-translate-y-1 hover:scale-105"
+              style={{ 
+                background: 'white',
+                border: 'none',
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              <div className="flex justify-center mb-4">
+                <span className="text-4xl">🔖</span>
+              </div>
+              <h3 
+                className="text-xl font-bold bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent mb-4"
                 style={{ 
-                  background: 'var(--background)',
-                  boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.3'
                 }}
               >
-                <h3 
-                  className="text-xl font-medium"
-                  style={{ 
-                    color: 'var(--foreground)',
-                    letterSpacing: '-0.01em',
-                    lineHeight: '1.3'
-                  }}
-                >
-                  {program}
-                </h3>
-              </motion.div>
-            ))}
+                Print Labels
+              </h3>
+              <p className="text-base font-bold" style={{ color: 'black', lineHeight: '1.4' }}>
+                MepScans lets you print labels effortlessly from any device, eliminating unnecessary back-and-forth. You can automate label printing in your programs and workflows based on customizable triggers.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-8 rounded-lg text-center hover:shadow-xl transition-shadow transform hover:-translate-y-1 hover:scale-105"
+              style={{ 
+                background: 'white',
+                border: 'none',
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              <div className="flex justify-center mb-4">
+                <span className="text-4xl">📄</span>
+              </div>
+              <h3 
+                className="text-xl font-bold bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent mb-4"
+                style={{ 
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.3'
+                }}
+              >
+                Printing Reports
+              </h3>
+              <p className="text-base font-bold" style={{ color: 'black', lineHeight: '1.4' }}>
+                Print any report anywhere on any device instantly. For example, automatically print picking sheets or other essential documents at the start of tasks, adapting seamlessly to your team's specific needs.
+              </p>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="p-8 rounded-lg text-center hover:shadow-xl transition-shadow transform hover:-translate-y-1 hover:scale-105"
+              style={{ 
+                background: 'white',
+                border: 'none',
+                boxShadow: '0 6px 12px rgba(0, 0, 0, 0.1)'
+              }}
+            >
+              <div className="flex justify-center mb-4">
+                <span className="text-4xl">🚀</span>
+              </div>
+              <h3 
+                className="text-xl font-bold bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent mb-4"
+                style={{ 
+                  letterSpacing: '-0.01em',
+                  lineHeight: '1.3'
+                }}
+              >
+                Custom WMS Reporting
+              </h3>
+              <p className="text-base font-bold" style={{ color: 'black', lineHeight: '1.4' }}>
+                Effortlessly generate customized dashboards and reports to understand exactly what's happening on your warehouse floor, in real-time and at any detail level you require.
+              </p>
+            </motion.div>
           </div>
         </div>
       </section>

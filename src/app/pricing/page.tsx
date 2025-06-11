@@ -9,136 +9,96 @@ const fadeInUp = {
   transition: { duration: 0.5 },
 };
 
-const pricingPlans = [
+
+const addOns = [
   {
-    name: "Basic",
-    description: "Perfect for small projects and startups",
-    price: "From $999",
-    features: [
-      "Basic 3D scanning",
-      "Standard resolution",
-      "Basic documentation",
-      "Email support",
-      "5-day turnaround",
+    name: "Additional Users",
+    options: [
+      { range: "4–10 Users", price: "$150/user/month" },
+      { range: "11–30 Users", price: "$125/user/month" },
+      { range: "31+ Users", price: "$100/user/month" },
     ],
   },
   {
-    name: "Professional",
-    description: "Ideal for growing businesses",
-    price: "From $2,499",
-    features: [
-      "High-resolution 3D scanning",
-      "Advanced documentation",
-      "Syspro integration",
-      "Priority support",
-      "3-day turnaround",
-      "Custom reporting",
-      "API access",
-    ],
-    popular: true,
-  },
-  {
-    name: "Enterprise",
-    description: "For large-scale operations",
-    price: "Custom",
-    features: [
-      "Ultra-high resolution scanning",
-      "Full documentation suite",
-      "Custom Syspro integration",
-      "24/7 dedicated support",
-      "Same-day turnaround",
-      "Custom reporting",
-      "API access",
-      "Dedicated account manager",
-    ],
+    name: "Additional Programs",
+    price: "$150/program/month",
   },
 ];
 
 export default function PricingPage() {
   return (
-    <div className="relative">
+    <div className="relative bg-black">
       {/* Hero Section */}
       <section className="relative py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-gray-800" />
+        <div className="absolute inset-0 bg-black" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-              Simple, Transparent Pricing
+            <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight mb-6 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent">
+              Flexible Pricing Designed for Your Business
             </h1>
-            <p className="text-xl text-gray-600 dark:text-gray-300">
-              Choose the perfect plan for your project needs
+            <p className="text-xl sm:text-2xl mb-12 max-w-3xl mx-auto font-normal text-gray-600 dark:text-gray-300">
+              Transparent monthly subscriptions. No long-term commitments. Easily scale your plan anytime.
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Pricing Cards */}
-      <section className="py-24 bg-white dark:bg-gray-900">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {pricingPlans.map((plan, index) => (
-              <motion.div
-                key={plan.name}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className={`relative flex flex-col p-8 rounded-2xl ${
-                  plan.popular
-                    ? "bg-blue-600 text-white dark:bg-blue-700"
-                    : "bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-white"
-                }`}
-              >
-                {plan.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="inline-flex items-center px-4 py-1 rounded-full text-sm font-semibold bg-blue-100 text-blue-800 dark:bg-blue-200 dark:text-blue-900">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <p className={`mb-6 ${plan.popular ? "text-blue-100" : "text-gray-600 dark:text-gray-300"}`}>
-                    {plan.description}
-                  </p>
-                  <div className="mb-6">
-                    <span className="text-4xl font-bold">{plan.price}</span>
-                    {plan.price !== "Custom" && <span className="text-sm opacity-75">/project</span>}
-                  </div>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="text-center max-w-3xl mx-auto"
+          >
+            <h2 className="text-5xl sm:text-5xl font-semibold tracking-tight mb-8 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent" style={{ lineHeight: '1.1' }}>
+              Base Package
+            </h2>
+            <p className="text-4xl font-bold text-white mb-6">
+              $599/month
+            </p>
+            <ul className="space-y-4 text-gray-300">
+              <li>3 Users + 2 Programs</li>
+              <li>Month-to-month subscription</li>
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Add-Ons Section */}
+      <section className="py-24 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent">
+            Base Add-Ons
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {addOns.map((addOn) => (
+              <div key={addOn.name} className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-shadow transform hover:-translate-y-1 hover:scale-105">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent">
+                  {addOn.name}
+                </h3>
+                {addOn.options ? (
                   <ul className="space-y-4">
-                    {plan.features.map((feature) => (
-                      <li key={feature} className="flex items-start">
-                        <CheckIcon
-                          className={`h-6 w-6 mr-3 flex-shrink-0 ${
-                            plan.popular ? "text-blue-200" : "text-blue-600 dark:text-blue-400"
-                          }`}
-                        />
-                        <span className={plan.popular ? "text-blue-100" : "text-gray-600 dark:text-gray-300"}>
-                          {feature}
-                        </span>
+                    {addOn.options.map((option) => (
+                      <li key={option.range} className="flex justify-between">
+                        <span className="text-gray-600 dark:text-gray-300">{option.range}</span>
+                        <span className="text-gray-900 dark:text-white font-medium">{option.price}</span>
                       </li>
                     ))}
                   </ul>
-                </div>
-                <div className="mt-8">
-                  <button
-                    className={`w-full py-3 px-6 rounded-lg font-medium transition-colors ${
-                      plan.popular
-                        ? "bg-white text-blue-600 hover:bg-blue-50"
-                        : "bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600"
-                    }`}
-                  >
-                    Get Started
-                  </button>
-                </div>
-              </motion.div>
+                ) : (
+                  <p className="text-gray-600 dark:text-gray-300">{addOn.price}</p>
+                )}
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-24 bg-gray-50 dark:bg-gray-800">
+      <section className="py-24 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -147,7 +107,7 @@ export default function PricingPage() {
             transition={{ duration: 0.5 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent">
               Frequently Asked Questions
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300">
@@ -158,24 +118,29 @@ export default function PricingPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                question: "What factors affect the final price?",
+                question: "Can I change my subscription anytime?",
                 answer:
-                  "The final price depends on project size, complexity, required resolution, and additional services like Syspro integration or custom reporting.",
+                  "Yes, you can easily adjust users or programs monthly without hassle.",
               },
               {
-                question: "Can I upgrade my plan later?",
+                question: "Is there a minimum subscription period?",
                 answer:
-                  "Yes, you can upgrade your plan at any time. We'll prorate the difference for the remaining period.",
-              },
-              {
-                question: "Do you offer volume discounts?",
-                answer:
-                  "Yes, we offer special pricing for multiple projects or long-term contracts. Contact us for details.",
+                  "No, our service is month-to-month, giving you complete control and flexibility.",
               },
               {
                 question: "What payment methods do you accept?",
                 answer:
-                  "We accept all major credit cards, bank transfers, and can accommodate purchase orders for enterprise clients.",
+                  "We accept all major credit cards and ACH transfers.",
+              },
+              {
+                question: "Are there any hidden fees?",
+                answer:
+                  "No hidden fees. Transparent pricing is our commitment to you.",
+              },
+              {
+                question: "Can I cancel anytime?",
+                answer:
+                  "Absolutely. You can cancel your subscription anytime without penalties.",
               },
             ].map((faq, index) => (
               <motion.div
@@ -184,9 +149,9 @@ export default function PricingPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white dark:bg-gray-900 p-6 rounded-xl"
+                className="bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg transition-shadow transform hover:-translate-y-1 hover:scale-105"
               >
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 bg-gradient-to-r from-purple-800 via-orange-400 to-green-500 bg-clip-text text-transparent">
                   {faq.question}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">

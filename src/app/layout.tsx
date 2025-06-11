@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`} style={{transition: "background-color 0.3s ease, color 0.3s ease"}}>
         <div className="flex flex-col min-h-screen">
-          <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md">
+          <header className="fixed top-0 left-0 right-0 z-150 h-100">
             <Navigation />
           </header>
           <main className="flex-grow pt-16">
